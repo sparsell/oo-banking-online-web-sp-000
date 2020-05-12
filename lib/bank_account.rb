@@ -1,3 +1,4 @@
+require 'pry'
 class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
@@ -6,6 +7,11 @@ class BankAccount
     @name = name
     @balance = 1000
     @status = "open"
+    end
+
+    def bank_balance
+      @balance
+      binding.pry
     end
 
     def deposit(amount)
