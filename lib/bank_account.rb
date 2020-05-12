@@ -9,7 +9,7 @@ class BankAccount
     @status = "open"
     end
 
-    def bank_balance
+    def balance
       @balance
 
     end
