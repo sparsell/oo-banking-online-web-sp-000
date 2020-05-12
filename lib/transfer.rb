@@ -27,7 +27,10 @@ require 'pry'
 
 
     def reverse_transfer
-
+      if valid? && receiver.balance >= @amount && self.status == "complete"#rejects a transfer if the sender does not have enough funds
+        sender.balance += @amount
+        receiver.balance -= @amount#can execute a successful transaction between two accounts
+        self.status = "reversed"
     end
 
   end
