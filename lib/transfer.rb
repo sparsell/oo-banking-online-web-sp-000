@@ -20,8 +20,8 @@ require 'pry'
         receiver.balance += @amount#can execute a successful transaction between two accounts
         self.status = "complete"
       else
-        "Transaction rejected. Please check your account balance."
         self.status == "rejected"
+        "Transaction rejected. Please check your account balance."
       end
     end
 
