@@ -15,9 +15,10 @@ require 'pry'
     end
 
     def execute_transaction
-      if sender.bank_balance >= @amount #rejects a transfer if the sender does not have enough funds
-        BankAccount.sender.balance - @amount && BankAccount.receiver.balance + @amount#can execute a successful transaction between two accounts
+      if valid? && sender.bank_balance >= @amount #rejects a transfer if the sender does not have enough funds
+        #BankAccount.sender.balance - @amount && BankAccount.receiver.balance + @amount#can execute a successful transaction between two accounts
       else
+        puts "You don't have sufficient funds to transfer."
       end
     end
 
