@@ -31,6 +31,7 @@ require 'pry'
         sender.balance += @amount
         receiver.balance -= @amount#can execute a successful transaction between two accounts
         self.status = "reversed"
+      end
     end
 
   end
